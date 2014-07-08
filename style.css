@@ -1,0 +1,38 @@
+body {
+  background-color: red;
+}
+
+#game {
+  background-color: white;
+  height: 500px;
+  width: 500px;
+  border: 1px solid black;
+  position: relative;
+}
+
+a {
+	text-decoration: none;
+}
+
+h1 {
+	text-align: left;
+}
+
+table {
+	background-color: white;
+	font-size: 100;
+	border: 2px solid black;
+}
+
+tr {
+	height: 200px;
+	width: 200px;
+	border: 2px solid black;
+}
+
+td {
+	height: 200px;
+	width: 200px;
+	border: 2px solid black;
+	text-align: center;
+}

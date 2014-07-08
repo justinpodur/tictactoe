@@ -1,5 +1,5 @@
 body {
-  background-color: red;
+  background-color: white;
 }
 
 #game {
@@ -15,7 +15,7 @@ a {
 }
 
 h1 {
-	text-align: left;
+	font-family: Arial;
 }
 
 table {

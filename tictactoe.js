@@ -12,12 +12,9 @@ $(document).ready( function(){
 
 				$(this).text("O");
 				oarray.push($(this).parent().attr('id'));
-				turn +=1;
-
-				if (oarray.indexOf('2') != -1
-					&& oarray.indexOf('5') != -1
-					&& oarray.indexOf('8') != -1) {
-					alert("O wins")
+				turn +=1;				
+				if( check_win(oarray) === true) {
+					alert("O wins");
 				}
 			}
 
@@ -26,6 +23,9 @@ $(document).ready( function(){
 				$(this).text("X");
 				xarray.push($(this).parent().attr('id'));
 				turn +=1;
+				if (check_win(xarray) === true) {
+					alert("X wins");
+				}
 			}
 		}
 		else {
@@ -34,4 +34,58 @@ $(document).ready( function(){
 
 	});	
 
+	function check_win(array) {
+		if (array.indexOf('1') != -1
+			&& array.indexOf('2') != -1
+			&& array.indexOf('3') != -1) 
+		{
+			return true;
+		}
+		else if  (array.indexOf('4') != -1
+			&& array.indexOf('5') != -1
+			&& array.indexOf('6') != -1) 
+		{
+			return true;
+		}
+		else if (array.indexOf('7') != -1
+			&& array.indexOf('8') != -1
+			&& array.indexOf('9') != -1) 
+		{
+			return true;
+		}
+		else if (array.indexOf('1') != -1
+			&& array.indexOf('5') != -1
+			&& array.indexOf('9') != -1) 
+		{
+			return true;
+		}
+		else if (array.indexOf('3') != -1
+			&& array.indexOf('5') != -1
+			&& array.indexOf('7') != -1) 
+		{
+			return true;
+		}
+		else if (array.indexOf('2') != -1
+			&& array.indexOf('5') != -1
+			&& array.indexOf('8') != -1) 
+		{
+			return true;
+		}
+		else if (array.indexOf('1') != -1
+			&& array.indexOf('4') != -1
+			&& array.indexOf('7') != -1) 
+		{
+			return true;
+		}
+		else if (array.indexOf('3') != -1
+			&& array.indexOf('6') != -1
+			&& array.indexOf('9') != -1) 
+		{
+			return true;
+		}
+		else
+		{
+			return false;
+		}
+	}
 });
